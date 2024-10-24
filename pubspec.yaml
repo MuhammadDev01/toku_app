@@ -1,0 +1,30 @@
+name: toku_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  audioplayers: ^3.0.1
+  device_preview: ^1.2.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/numbers/
+    - assets/images/family_members/
+    - assets/images/colors/
+    - assets/sounds/numbers/
+    - assets/sounds/family_members/
+    - assets/sounds/colors/
+    - assets/sounds/phrases/

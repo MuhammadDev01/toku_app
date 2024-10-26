@@ -76,9 +76,8 @@ class FamilyMembersScreen extends StatelessWidget {
         backgroundColor: Colors.brown,
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => defaultCategoryItem(
+        itemBuilder: (context, index) => tokuBuilderItem(
           model: familyMembers[index],
-          color: Colors.lightGreen,
         ),
         itemCount: familyMembers.length,
       ),

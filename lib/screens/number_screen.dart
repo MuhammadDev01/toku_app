@@ -73,12 +73,14 @@ class NumbersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Numbers'),
-        backgroundColor: Colors.brown,
+        centerTitle: true,
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => defaultCategoryItem(
+      body: ListView.separated(
+        separatorBuilder: (context, index) => Divider(
+          thickness: 2,
+        ),
+        itemBuilder: (context, index) => tokuBuilderItem(
           model: numbers[index],
-          color: Colors.teal,
         ),
         itemCount: numbers.length,
       ),

@@ -69,9 +69,8 @@ class ColorsScreen extends StatelessWidget {
         backgroundColor: Colors.brown,
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => defaultCategoryItem(
+        itemBuilder: (context, index) => tokuBuilderItem(
           model: colors[index],
-          color: Colors.purple,
         ),
         itemCount: colors.length,
       ),

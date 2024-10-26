@@ -73,9 +73,12 @@ class FamilyMembersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('FamilyMember'),
-        backgroundColor: Colors.brown,
+        centerTitle: true,
       ),
-      body: ListView.builder(
+      body: ListView.separated(
+        separatorBuilder: (context, index) => Divider(
+          thickness: 2,
+        ),
         itemBuilder: (context, index) => tokuBuilderItem(
           model: familyMembers[index],
         ),

@@ -7,37 +7,33 @@ Widget tokuBuilderItem({
 }) =>
     Row(
       children: [
-        Image.asset(
-          model.imgPath!,
-          height: 100,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                model.jpName,
-              ),
-              Text(
-                model.enName,
-              ),
-            ],
+        if (model.imgPath != null)
+          Image.asset(
+            model.imgPath!,
+            height: 100,
           ),
-        ),
-        const Spacer(),
-        IconButton(
-          icon: const Icon(
-            Icons.play_arrow,
-            color: Colors.red,
+        Expanded(
+          child: ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(
+              model.jpName,
+            ),
+            subtitle: Text(
+              model.enName,
+            ),
+            trailing: IconButton(
+              icon: const Icon(
+                Icons.play_arrow,
+                color: Colors.red,
+              ),
+              onPressed: () async {
+                final player = AudioPlayer();
+                await player.play(
+                  AssetSource(model.soundpath),
+                );
+              },
+            ),
           ),
-          onPressed: () async {
-            final player = AudioPlayer();
-            await player.play(
-              AssetSource(model.soundpath),
-            );
-          },
         ),
       ],
     );

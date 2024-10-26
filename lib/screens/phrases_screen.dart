@@ -1,5 +1,5 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:toku_app/components/component.dart';
 import '../models/toku_model.dart';
 
 class PhrasesScreen extends StatelessWidget {
@@ -57,71 +57,16 @@ class PhrasesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Phrases'),
-        backgroundColor: Colors.brown,
+        centerTitle: true,
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) => phraseItem(
-          phrase: phrases[index],
-          color: Colors.blue,
+      body: ListView.separated(
+        padding: EdgeInsets.only(left: 12),
+        separatorBuilder: (context, index) => Divider(thickness: 2),
+        itemBuilder: (context, index) => tokuBuilderItem(
+          model: phrases[index],
         ),
         itemCount: phrases.length,
       ),
     );
   }
 }
-
-Widget phraseItem({
-  required Color color,
-  required TokuModel phrase,
-}) =>
-    Container(
-      color: color,
-      child: Row(
-        children: [
-          Container(
-            color: Colors.amber[50],
-            height: 100.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 10.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  phrase.jpName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16.0,
-                  ),
-                ),
-                Text(
-                  phrase.enName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Spacer(
-            flex: 1,
-          ),
-          IconButton(
-            icon: const Icon(
-              Icons.play_arrow,
-              color: Colors.white,
-            ),
-            onPressed: () async {
-              final player = AudioPlayer();
-              await player.play(
-                AssetSource(phrase.soundpath),
-              );
-            },
-          ),
-        ],
-      ),
-    );

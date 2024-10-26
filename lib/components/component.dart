@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:toku_app/models/category_item_model.dart';
+import 'package:toku_app/models/toku_model.dart';
 
 Widget defaultCategory({
   required void Function()? onTap,
@@ -28,7 +28,7 @@ Widget defaultCategory({
 
 Widget defaultCategoryItem({
   required Color color,
-  required CategoryItemModel model,
+  required TokuModel model,
 }) =>
     Container(
       color: color,

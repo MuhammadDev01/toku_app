@@ -1,51 +1,51 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import '../models/category_item_model.dart';
+import '../models/toku_model.dart';
 
 class PhrasesScreen extends StatelessWidget {
   const PhrasesScreen({super.key});
-  final List<CategoryItemModel> phrases = const [
-    CategoryItemModel(
+  final List<TokuModel> phrases = const [
+    TokuModel(
       soundpath: 'sounds/phrases/are_you_coming.wav',
       jpName: 'Kimasu ka ?',
       enName: 'are you coming?',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/dont_forget_to_subscribe.wav',
       jpName: 'Kōdoku suru koto o wasurenaide kudasai',
       enName: 'don\'t forget to subscribe',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/how_are_you_feeling.wav',
       jpName: 'Go kibun wa ikagadesu ka ?',
       enName: 'how are you feeling ? ',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/i_love_anime.wav',
       jpName: 'Watashi wa anime ga daisukidesu',
       enName: 'i love anime',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/i_love_programming.wav',
       jpName: 'Watashi wa puroguramingu ga daisukidesu',
       enName: 'i love programming',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/programming_is_easy.wav',
       jpName: 'Puroguramingu wa kantandesu',
       enName: 'programming is easy',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/what_is_your_name.wav',
       jpName: 'Namae wa nandesu ka ?',
       enName: 'what is your name ?',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/where_are_you_going.wav',
       jpName: 'Doko ni iku no ?',
       enName: 'where are you going ?',
     ),
-    CategoryItemModel(
+    TokuModel(
       soundpath: 'sounds/phrases/yes_im_coming.wav',
       jpName: 'Hai, ikimasu',
       enName: 'yes i\'m coming',
@@ -72,7 +72,7 @@ class PhrasesScreen extends StatelessWidget {
 
 Widget phraseItem({
   required Color color,
-  required CategoryItemModel phrase,
+  required TokuModel phrase,
 }) =>
     Container(
       color: color,

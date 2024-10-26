@@ -7,18 +7,33 @@ environment:
   sdk: '>=2.19.2 <3.0.0'
 
 dependencies:
-  audioplayers: ^3.0.1
+  audioplayers: ^6.1.0
   device_preview: ^1.2.0
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
+  icons_launcher: ^3.0.0 
   flutter_test:
     sdk: flutter
 
+icons_launcher:
+  image_path: "assets/logo.jpg"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
 flutter:
   uses-material-design: true
+    
+  fonts:
+    - family: ADLaM Display
+      fonts:
+        - asset: assets/fonts/ADLaMDisplay-Regular.ttf
+       
+    
 
   assets:
     - assets/images/numbers/
@@ -28,3 +43,4 @@ flutter:
     - assets/sounds/family_members/
     - assets/sounds/colors/
     - assets/sounds/phrases/
+    - assets/

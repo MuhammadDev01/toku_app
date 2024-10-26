@@ -1,13 +1,13 @@
-class CategoryItemModel {
-  final String soundpath;
-  final String jpName;
-  final String enName;
-  final String? imgPath;
+import 'package:flutter/material.dart';
 
-  const CategoryItemModel({
-    required this.soundpath,
-    required this.enName,
-    required this.jpName,
-    this.imgPath,
+class CategoryItemModel {
+  final Widget page;
+  final String categoryName;
+  final String categoryIconImage;
+
+  CategoryItemModel({
+    required this.page,
+    required this.categoryName,
+    required this.categoryIconImage,
   });
 }

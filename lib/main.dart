@@ -10,14 +10,14 @@ void main() {
     DevicePreview(
       enabled: !kReleaseMode,
       builder: (context) => GetMaterialApp(
-          home: TokuScreen(),
-          debugShowCheckedModeBanner: false,
-          locale: DevicePreview.locale(context),
-          builder: DevicePreview.appBuilder,
-          darkTheme: AppTheme.darkTheme,
-          theme: AppTheme.defaultTheme,
-          themeMode: ThemeMode.dark,
-          useInheritedMediaQuery: true),
+        home: TokuScreen(),
+        debugShowCheckedModeBanner: false,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        darkTheme: AppTheme.darkTheme,
+        theme: AppTheme.defaultTheme,
+        useInheritedMediaQuery: true,
+      ),
     ),
   );
 }

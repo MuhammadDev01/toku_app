@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:toku_app/logic/controllers/toku_controller.dart';
 import 'package:toku_app/models/category_item_model.dart';
 import 'package:toku_app/views/colors_screen.dart';
 import 'package:toku_app/views/family_members_screen.dart';
@@ -30,7 +32,7 @@ class TokuScreen extends StatelessWidget {
       categoryIconImage: 'assets/colors.png',
     ),
   ];
-
+  final controller = Get.put(TokuController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +41,14 @@ class TokuScreen extends StatelessWidget {
           'Welcome To Toku',
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.dark_mode),
+            onPressed: () {
+              controller.changeTheme();
+            },
+          ),
+        ],
       ),
       body: GridView.count(
         padding: EdgeInsets.all(12),

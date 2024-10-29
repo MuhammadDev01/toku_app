@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toku_app/components/component.dart';
+import 'package:toku_app/utils/component.dart';
 import '../models/toku_model.dart';
 
 class PhrasesScreen extends StatelessWidget {

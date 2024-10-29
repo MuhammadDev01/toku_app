@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../components/component.dart';
+import '../utils/component.dart';
 import '../models/toku_model.dart';
 
 class ColorsScreen extends StatelessWidget {

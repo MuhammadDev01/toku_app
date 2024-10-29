@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/toku_model.dart';
-import '../components/component.dart';
+import '../utils/component.dart';
 
 class FamilyMembersScreen extends StatelessWidget {
   const FamilyMembersScreen({super.key});

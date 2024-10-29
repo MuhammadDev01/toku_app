@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/category_item_model.dart';
-import 'package:toku_app/screens/colors_screen.dart';
-import 'package:toku_app/screens/family_members_screen.dart';
-import 'package:toku_app/screens/phrases_screen.dart';
-import 'package:toku_app/screens/number_screen.dart';
+import 'package:toku_app/views/colors_screen.dart';
+import 'package:toku_app/views/family_members_screen.dart';
+import 'package:toku_app/views/phrases_screen.dart';
+import 'package:toku_app/views/number_screen.dart';
 
 class TokuScreen extends StatelessWidget {
   TokuScreen({super.key});

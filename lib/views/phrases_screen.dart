@@ -64,6 +64,7 @@ class PhrasesScreen extends StatelessWidget {
         separatorBuilder: (context, index) => Divider(thickness: 2),
         itemBuilder: (context, index) => tokuBuilderItem(
           model: phrases[index],
+          context: context,
         ),
         itemCount: phrases.length,
       ),

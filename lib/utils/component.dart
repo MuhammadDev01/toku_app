@@ -1,25 +1,41 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:toku_app/models/toku_model.dart';
 
 Widget tokuBuilderItem({
   required TokuModel model,
+  required BuildContext context,
 }) =>
     Row(
       children: [
         if (model.imgPath != null)
-          Image.asset(
-            model.imgPath!,
-            height: 100,
+          Container(
+            margin: EdgeInsets.only(left: 12),
+            decoration: BoxDecoration(
+              color: Colors.grey.shade100,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Image.asset(
+              model.imgPath!,
+              height: 100,
+            ),
           ),
+        SizedBox(
+          width: 10,
+        ),
         Expanded(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             title: Text(
-              model.jpName,
+             'Jp: ${model.jpName}',
+              style: Theme.of(context).textTheme.displaySmall,
             ),
             subtitle: Text(
-              model.enName,
+             'Eng: ${model.enName}',
+              style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                color: Colors.teal,
+              ),
             ),
             trailing: IconButton(
               icon: const Icon(

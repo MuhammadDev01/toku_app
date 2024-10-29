@@ -81,6 +81,7 @@ class FamilyMembersScreen extends StatelessWidget {
         ),
         itemBuilder: (context, index) => tokuBuilderItem(
           model: familyMembers[index],
+          context: context,
         ),
         itemCount: familyMembers.length,
       ),

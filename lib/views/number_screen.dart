@@ -81,6 +81,7 @@ class NumbersScreen extends StatelessWidget {
         ),
         itemBuilder: (context, index) => tokuBuilderItem(
           model: numbers[index],
+          context: context,
         ),
         itemCount: numbers.length,
       ),

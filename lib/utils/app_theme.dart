@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class AppTheme {
   static ThemeData defaultTheme = ThemeData(
-    primarySwatch: Colors.deepOrange,
     fontFamily: 'ADLaM Display',
     appBarTheme: AppBarTheme(
       titleSpacing: 20,
@@ -24,11 +24,11 @@ class AppTheme {
         size: 32,
       ),
     ),
-    textTheme: const TextTheme(
+    textTheme: TextTheme(
       displaySmall: TextStyle(
         color: Colors.black,
         fontWeight: FontWeight.bold,
-        fontSize: 20,
+        fontSize: 14,
       ),
     ),
     iconTheme: IconThemeData(
@@ -37,14 +37,13 @@ class AppTheme {
     scaffoldBackgroundColor: Colors.grey.shade100,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       selectedItemColor: Colors.deepOrange,
       elevation: 20.0,
     ),
   );
 
   static ThemeData darkTheme = ThemeData(
-    primarySwatch: Colors.deepOrange,
     fontFamily: 'ADLaM Display',
     appBarTheme: const AppBarTheme(
       titleSpacing: 20,
@@ -52,7 +51,8 @@ class AppTheme {
       elevation: 0.0,
       titleTextStyle: TextStyle(
         color: Colors.white,
-        fontSize: 24,
+        fontSize: 22,
+        fontFamily: 'ADLaM Display',
         fontWeight: FontWeight.bold,
       ),
       systemOverlayStyle: SystemUiOverlayStyle(
@@ -69,10 +69,9 @@ class AppTheme {
       displaySmall: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
-        fontSize: 20,
+        fontSize: 14,
       ),
     ),
-    
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Color(0xff27292a),

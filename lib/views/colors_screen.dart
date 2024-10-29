@@ -68,6 +68,7 @@ class ColorsScreen extends StatelessWidget {
         ),
         itemBuilder: (context, index) => tokuBuilderItem(
           model: colors[index],
+          context: context
         ),
         itemCount: colors.length,
       ),
